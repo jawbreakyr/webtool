@@ -1,0 +1,43 @@
+<!doctype html>
+{% load staticfiles %}
+
+<html>
+	<head>
+		<link type="text/css" rel="stylesheet" href="{% static 'css/bootstrap.css' %}"/> 
+		<link type="text/css" rel="stylesheet" href="{% static 'css/home.css' %}"/>
+		<title>Webtool</title>
+	</head>
+	<body>
+		<div class="wrapper">	
+			<div id="header">
+				<div class="container-fluid">
+					<h1>"SECRET_KEY" Generator</h1>
+					<p>A simple web based app that generates Django SECRET_KEY.</p>
+				</div>
+				<div class="ticks">
+					<a href="www.example.com"><span class="label label-default">Default</span></a>
+					<a href="www.example.com"><span class="label label-default">Primary</span></a>
+					<a href="www.example.com"><span class="label label-default">Success</span></a>
+					<a href="www.example.com"><span class="label label-default">Info</span></a>
+					<a href="www.example.com"><span class="label label-default">Warning</span></a>
+					<a href="www.example.com"><span class="label label-default">Danger</span></a>
+				</div>
+			</div>
+			<div>
+				<div class="well">	
+					<samp>{{ SECRET_KEY }}</samp>
+				</div>
+				<div>
+					<a href="{% url 'home' %}" class="btn btn-primary btn-lg active">generate</a>		
+				</div>
+			</div>
+		</div>
+		<div id="footer">
+			<h3 class="text-muted">Copyright (c) 2014, jawbreakyr@gmail.com</h3>
+			<h3 class="text-muted">All rights reserved.</h3>
+		</div>
+		<script src="{% static 'js/jquery.js' %}"></script>
+		<script src="{% static 'js/bootstrap.min.js' %}"></script>
+	</body>
+</html>
+

@@ -17,6 +17,8 @@ DATABASES = {
     }
 }
 
+WSGI_APPLICATION = 'shorturls.wsgi.application'
+
 INSTALLED_APPS = (
 	'shorturls',
 	'django.contrib.staticfiles',
